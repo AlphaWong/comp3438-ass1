@@ -33,3 +33,36 @@ cat /proc/devices
 ```bash
 mknod /dev/buzzer c 250 1
 ```
+
+# Code
+```c
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <sys/ioctl.h>
+#include <fcntl.h>
+
+char beep;
+int fd;
+
+int main()
+{
+	fd = open("/dev/buzzer", O_WRONLY);
+	if(fd == -1)
+	{
+		printf("Fail to open device lab4!\n");
+		goto finish;	
+	}
+	while(1)
+	{
+    write(fd, "0", 1);
+	}
+	close(fd);
+
+finish:	
+	return 0;
+}
+
+```
