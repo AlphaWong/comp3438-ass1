@@ -15,6 +15,11 @@ config
   depends on CPU_S5PV210
 ```
 
+# Mount path of nfs
+```bash
+mount -t nfs -o nolock,rsize=4096,wsize=4096 192.168.1.145:/tiny6410 /mnt/nfs
+```
+
 # Map driver
 1. Load driver
 ```bash
