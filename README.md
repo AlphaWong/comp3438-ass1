@@ -1,6 +1,6 @@
 # comp3438-ass1
 
-# Install Buzzer driver
+# Make linux with Buzzer driver
 ## Step
 1. Move the buzzer_driver.c to ```tiny6410/linux-3.08/drivers/char```
 1. Add following statement in ```tiny6410/linux-3.08/drivers/char/Makefile```
@@ -15,3 +15,16 @@ config
   depends on CPU_S5PV210
 ```
 
+# Map driver
+1. Load driver
+```bash
+insmod buzzer_driver.ko
+```
+1. Lockup ports
+```bash
+cat /proc/devices
+```
+1. Map to /dev dir
+```bash
+mknod /dev/buzzer c 250 1
+```
