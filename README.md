@@ -24,6 +24,8 @@ config DRIVER_BUTTON
 ```bash
 /tiny6410/linux-3.0.8$ make menuconfig
 # set char driver as <M>
+
+/tiny6410/linux-3.0.8$ make
 ```
 
 # Mount path of nfs
