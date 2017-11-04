@@ -52,6 +52,7 @@ cat /proc/devices
 1. Map to /dev dir
 ```bash
 mknod /dev/buzzer c 250 1
+mknod /dev/comp309_char_buttons c 249 1
 ```
 
 # Code
