@@ -44,6 +44,8 @@ mount -t nfs -o nolock,rsize=4096,wsize=4096 192.168.1.145:/tiny6410 /mnt/nfs
 
 insmod buzzer-driver.ko
 insmod button-driver.ko
+
+rmmod button-driver.ko
 ```
 1. Lockup ports
 ```bash
