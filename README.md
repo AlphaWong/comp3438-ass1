@@ -8,11 +8,15 @@
 ```
 # Remember the file name must be same as step 1 file name.
 obj-$(CONFIG_BUZZERDRIVER) += buzzer-driver.o
+obj-$(CONFIG_BUTTONDRIVER) += button-driver.o
 ```
 1. Add following statement in ```tiny6410/linux-3.08/drivers/char/Kconfig```
 ```
 config
   tristate "BUZZERDRIVER"
+  depends on CPU_S5PV210
+config
+  tristate "BUTTONDRIVER"
   depends on CPU_S5PV210
 ```
 
