@@ -7,7 +7,7 @@
 1. Add following statement in ```tiny6410/linux-3.08/drivers/char/Makefile```
 ```
 # Remember the file name must be same as step 1 file name.
-obj-$(CONFIG_BUZZERDRIVER) += buzzer_driver.o
+obj-$(CONFIG_BUZZERDRIVER) += buzzer-driver.o
 ```
 1. Add following statement in ```tiny6410/linux-3.08/drivers/char/Kconfig```
 ```
