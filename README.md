@@ -12,12 +12,12 @@ obj-$(CONFIG_BUTTONDRIVER) += button-driver.o
 ```
 1. Add following statement in ```tiny6410/linux-3.08/drivers/char/Kconfig```
 ```
-config DRIVER_BUZZER
-  tristate "BUZZERDRIVER"
-  depends on CPU_S5PV210
-config DRIVER_BUTTON
-  tristate "BUTTONDRIVER"
-  depends on CPU_S5PV210
+config BUZZER_DRIVER
+  	tristate "BUZZER DRIVER"
+  	depends on CPU_S5PV210
+config BUTTON_DRIVER
+  	tristate "BUTTON DRIVER"
+  	depends on CPU_S5PV210
 ```
 
 # Build 
@@ -39,8 +39,9 @@ mount -t nfs -o nolock,rsize=4096,wsize=4096 192.168.1.145:/tiny6410 /mnt/nfs
 ```
 
 # Map driver
-1. dymc load driver to http://kernel/
+1. dymc load driver to kernel
 ```bash
+
 insmod buzzer-driver.ko
 insmod button-driver.ko
 ```
