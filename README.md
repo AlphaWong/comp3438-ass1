@@ -20,6 +20,11 @@ config
   depends on CPU_S5PV210
 ```
 
+# Build 
+```bash
+/tiny6410/linux-3.0.8$ make menuconfig
+```
+
 # Mount path of nfs
 PuTTY
 ```
