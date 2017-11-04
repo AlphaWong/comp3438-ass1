@@ -12,10 +12,10 @@ obj-$(CONFIG_BUTTONDRIVER) += button-driver.o
 ```
 1. Add following statement in ```tiny6410/linux-3.08/drivers/char/Kconfig```
 ```
-config
+config DRIVER_BUZZER
   tristate "BUZZERDRIVER"
   depends on CPU_S5PV210
-config
+config DRIVER_BUTTON
   tristate "BUTTONDRIVER"
   depends on CPU_S5PV210
 ```
