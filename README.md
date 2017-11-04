@@ -39,9 +39,10 @@ mount -t nfs -o nolock,rsize=4096,wsize=4096 192.168.1.145:/tiny6410 /mnt/nfs
 ```
 
 # Map driver
-1. Load driver
+1. dymc load driver to http://kernel/
 ```bash
-insmod buzzer_driver.ko
+insmod buzzer-driver.ko
+insmod button-driver.ko
 ```
 1. Lockup ports
 ```bash
