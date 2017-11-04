@@ -21,6 +21,11 @@ config
 ```
 
 # Mount path of nfs
+PuTTY
+```
+cmd mode
+COM3 115200
+```
 ```bash
 mount -t nfs -o nolock,rsize=4096,wsize=4096 192.168.1.145:/tiny6410 /mnt/nfs
 ```
